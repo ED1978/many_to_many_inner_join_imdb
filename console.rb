@@ -42,6 +42,45 @@ dicaprio = Star.new (
 )
 dicaprio.save()
 
+pitt = Star.new (
+  {
+    'first_name' => 'Brad',
+    'last_name' => 'Pitt'
+  }
+)
+pitt.save()
+
+robbie = Star.new (
+  {
+    'first_name' => 'Margot',
+    'last_name' => 'Robbie'
+  }
+)
+robbie.save()
+
+pheonix = Star.new (
+  {
+    'first_name' => 'Joaquin',
+    'last_name' => 'Pheonix'
+  }
+)
+pheonix.save()
+
+deniro = Star.new (
+  {
+    'first_name' => 'Robert',
+    'last_name' => 'De Niro'
+  }
+)
+deniro.save()
+
+conroy = Star.new (
+  {
+    'first_name' => 'Frances',
+    'last_name' => 'Conroy'
+  }
+)
+conroy.save()
 
 # Casting
 
