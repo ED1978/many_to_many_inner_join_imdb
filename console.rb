@@ -24,8 +24,11 @@ joker.save()
 hollywood.genre = 'True Crime'
 hollywood.update()
 
-movies = Movie.all()
 found_movie = Movie.find(hollywood.id)
+
+# hollywood.delete()
+
+movies = Movie.all()
 
 # Star
 
