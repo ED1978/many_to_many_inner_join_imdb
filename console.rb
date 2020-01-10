@@ -103,5 +103,50 @@ dicaprio_hollywood_casting = Casting.new (
 )
 dicaprio_hollywood_casting.save()
 
+pitt_hollywood_casting = Casting.new (
+  {
+    'movie_id' => hollywood.id,
+    'star_id' => pitt.id,
+    'fee' => 10000000
+  }
+)
+pitt_hollywood_casting.save()
+
+robbie_hollywood_casting = Casting.new (
+  {
+    'movie_id' => hollywood.id,
+    'star_id' => robbie.id,
+    'fee' => 7000000
+  }
+)
+robbie_hollywood_casting.save()
+
+pheonix_joker_casting = Casting.new (
+  {
+    'movie_id' => joker.id,
+    'star_id' => pheonix.id,
+    'fee' => 11000000
+  }
+)
+pheonix_joker_casting.save()
+
+deniro_joker_casting = Casting.new (
+  {
+    'movie_id' => joker.id,
+    'star_id' => deniro.id,
+    'fee' => 9000000
+  }
+)
+deniro_joker_casting.save()
+
+conroy_joker_casting = Casting.new (
+  {
+    'movie_id' => joker.id,
+    'star_id' => conroy.id,
+    'fee' => 6000000
+  }
+)
+conroy_joker_casting.save()
+
 binding.pry
 nil
