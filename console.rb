@@ -1,4 +1,5 @@
 require_relative('./models/movie.rb')
+require_relative('./models/star.rb')
 
 require('pry-byebug')
 
@@ -31,7 +32,13 @@ found_movie = Movie.find(hollywood.id)
 movies = Movie.all()
 
 # Star
-
+dicaprio = Star.new (
+  {
+    'first_name' => 'Leonardo',
+    'last_name' => 'DiCaprio'
+  }
+)
+dicaprio.save()
 
 # Casting
 
