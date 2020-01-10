@@ -3,9 +3,10 @@ require_relative('./models/star.rb')
 
 require('pry-byebug')
 
-# Movie
 Movie.delete_all()
+Star.delete_all()
 
+# Movie
 hollywood = Movie.new (
   {
     'title' => 'Once Upon a Time in Hollywood',
@@ -31,6 +32,7 @@ found_movie = Movie.find(hollywood.id)
 
 movies = Movie.all()
 
+
 # Star
 dicaprio = Star.new (
   {
@@ -39,6 +41,7 @@ dicaprio = Star.new (
   }
 )
 dicaprio.save()
+
 
 # Casting
 
