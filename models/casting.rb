@@ -72,4 +72,20 @@ class Casting
     SqlRunner.run(sql, values)
   end
 
+  # MOVIE JOIN
+  def movie()
+    sql = "SELECT * FROM movies WHERE id = $1"
+    values = [@movie_id]
+    movie = SqlRunner.run(sql, values).first
+    return Movie.new(movie)
+  end
+
+  # STAR JOIN
+  def star()
+    sql = "SELECT * FROM stars WHERE id = $1"
+    values = [@star_id]
+    star = SqlRunner.run(sql, values).first
+    return Star.new(star)
+  end
+
 end

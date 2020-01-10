@@ -25,6 +25,14 @@ joker = Movie.new (
 )
 joker.save()
 
+revenant = Movie.new (
+  {
+    'title' => 'The Revenant',
+    'genre' => 'Drama'
+  }
+)
+revenant.save()
+
 hollywood.genre = 'True Crime'
 hollywood.update()
 
@@ -147,6 +155,15 @@ conroy_joker_casting = Casting.new (
   }
 )
 conroy_joker_casting.save()
+
+dicaprio_revenant_casting = Casting.new (
+  {
+    'movie_id' => revenant.id,
+    'star_id' => dicaprio.id,
+    'fee' => 12000000
+  }
+)
+dicaprio_revenant_casting.save()
 
 found_casting = Casting.find(deniro_joker_casting.id)
 
