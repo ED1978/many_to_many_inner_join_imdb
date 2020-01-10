@@ -36,6 +36,12 @@ class Star
     star = Star.new(star_hash)
   end
 
+  def self.all()
+    sql = "SELECT * FROM stars"
+    stars = SqlRunner.run(sql)
+    return stars.map { |star| Star.new(star) }
+  end
+
   # UPDATE
 
 
