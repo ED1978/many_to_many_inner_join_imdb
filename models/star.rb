@@ -29,7 +29,12 @@ class Star
   end
 
   # READ
-
+  def self.find(id)
+    sql = "SELECT * FROM stars WHERE id = $1"
+    values = [id]
+    star_hash = SqlRunner.run(sql, values).first
+    star = Star.new(star_hash)
+  end
 
   # UPDATE
 

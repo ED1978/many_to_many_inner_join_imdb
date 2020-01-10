@@ -82,6 +82,8 @@ conroy = Star.new (
 )
 conroy.save()
 
+found_star = Star.find(conroy.id)
+
 # Casting
 
 
