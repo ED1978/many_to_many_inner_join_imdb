@@ -25,6 +25,7 @@ hollywood.genre = 'True Crime'
 hollywood.update()
 
 movies = Movie.all()
+found_movie = Movie.find(hollywood.id)
 
 # Star
 
