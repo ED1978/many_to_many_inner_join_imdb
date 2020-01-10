@@ -87,6 +87,8 @@ found_star = Star.find(conroy.id)
 deniro.first_name = 'Bobby'
 deniro.update()
 
+# deniro.delete()
+
 stars = Star.all()
 
 # Casting
