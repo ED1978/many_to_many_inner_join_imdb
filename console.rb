@@ -2,6 +2,7 @@ require_relative('./models/movie.rb')
 
 require('pry-byebug')
 
+# Movie
 Movie.delete_all()
 
 hollywood = Movie.new (
@@ -22,6 +23,14 @@ joker.save()
 
 hollywood.genre = 'True Crime'
 hollywood.update()
+
+movies = Movie.all()
+
+# Star
+
+
+# Casting
+
 
 binding.pry
 nil
