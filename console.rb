@@ -1,5 +1,6 @@
 require_relative('./models/movie.rb')
 require_relative('./models/star.rb')
+require_relative('./models/Casting.rb')
 
 require('pry-byebug')
 
@@ -92,7 +93,14 @@ deniro.update()
 stars = Star.all()
 
 # Casting
-
+dicaprio_hollywood_casting = Casting.new (
+  {
+    'movie_id' => hollywood.id,
+    'star_id' => dicaprio.id,
+    'fee' => 15000000
+  }
+)
+dicaprio_hollywood_casting.save()
 
 binding.pry
 nil
