@@ -4,6 +4,7 @@ require_relative('./models/Casting.rb')
 
 require('pry-byebug')
 
+Casting.delete_all()
 Movie.delete_all()
 Star.delete_all()
 
