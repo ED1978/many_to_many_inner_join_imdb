@@ -12,6 +12,16 @@ hollywood = Movie.new (
 )
 hollywood.save()
 
+joker = Movie.new (
+  {
+    'title' => 'Joker',
+    'genre' => 'Comic Book'
+  }
+)
+joker.save()
+
+hollywood.genre = 'True Crime'
+hollywood.update()
 
 binding.pry
 nil

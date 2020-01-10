@@ -11,6 +11,7 @@ class Movie
     @genre = options['genre']
   end
 
+# CREATE
   def save()
     sql = "INSERT INTO movies
     (
@@ -27,6 +28,26 @@ class Movie
     @id = movie['id'].to_i
   end
 
+# READ
+
+
+
+# UPDATE
+  def update()
+    sql = "UPDATE movies SET
+    (
+      title,
+      genre
+    ) =
+    (
+      $1, $2
+    )
+    WHERE id = $3"
+    values = [@title, @genre, @id]
+    SqlRunner.run(sql, values)
+  end
+
+# DELETE
   def self.delete_all()
     sql = "DELETE FROM movies"
     SqlRunner.run(sql)
