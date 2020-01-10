@@ -81,4 +81,6 @@ class Movie
     return stars.map { |star| Star.new(star) }
   end
 
+  # CASTINGS JOIN
+
 end
