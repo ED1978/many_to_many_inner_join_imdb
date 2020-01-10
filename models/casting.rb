@@ -37,6 +37,14 @@ class Casting
     return castings.map { |casting| Casting.new(casting) }
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM castings WHERE id = $1"
+    values = [id]
+    casting_hash = SqlRunner.run(sql, values).first
+    casting = Casting.new(casting_hash)
+    # return casting
+  end
+
   # UPDATE
 
 

@@ -148,6 +148,8 @@ conroy_joker_casting = Casting.new (
 )
 conroy_joker_casting.save()
 
+found_casting = Casting.find(deniro_joker_casting.id)
+
 castings = Casting.all()
 
 binding.pry
