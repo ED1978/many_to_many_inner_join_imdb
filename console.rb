@@ -148,5 +148,7 @@ conroy_joker_casting = Casting.new (
 )
 conroy_joker_casting.save()
 
+castings = Casting.all()
+
 binding.pry
 nil
