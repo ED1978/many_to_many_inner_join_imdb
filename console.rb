@@ -150,6 +150,9 @@ conroy_joker_casting.save()
 
 found_casting = Casting.find(deniro_joker_casting.id)
 
+deniro_joker_casting.fee = 10000000
+deniro_joker_casting.update()
+
 castings = Casting.all()
 
 binding.pry

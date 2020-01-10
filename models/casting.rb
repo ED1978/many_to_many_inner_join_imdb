@@ -42,11 +42,23 @@ class Casting
     values = [id]
     casting_hash = SqlRunner.run(sql, values).first
     casting = Casting.new(casting_hash)
-    # return casting
   end
 
   # UPDATE
-
+  def update()
+    sql = "UPDATE castings SET
+    (
+      movie_id,
+      star_id,
+      fee
+    ) =
+    (
+      $1, $2, $3
+    )
+    WHERE id = $4"
+    values = [@movie_id, @star_id, @fee, @id]
+    SqlRunner.run(sql, values)
+  end
 
   # DELETE
   def self.delete_all()
