@@ -84,6 +84,9 @@ conroy.save()
 
 found_star = Star.find(conroy.id)
 
+deniro.first_name = 'Bobby'
+deniro.update()
+
 stars = Star.all()
 
 # Casting

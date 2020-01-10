@@ -43,7 +43,19 @@ class Star
   end
 
   # UPDATE
-
+  def update()
+    sql = "UPDATE stars SET
+    (
+      first_name,
+      last_name
+    ) =
+    (
+      $1, $2
+    )
+    WHERE id = $3"
+    values = [@first_name, @last_name, @id]
+    SqlRunner.run(sql, values)
+  end
 
   # DELETE
   def self.delete_all()
