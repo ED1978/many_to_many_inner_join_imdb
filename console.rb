@@ -39,6 +39,9 @@ revenant.save()
 hollywood.genre = 'True Crime'
 hollywood.update()
 
+hollywood.budget = 120000000
+hollywood.update()
+
 found_movie = Movie.find(hollywood.id)
 
 # hollywood.delete()
