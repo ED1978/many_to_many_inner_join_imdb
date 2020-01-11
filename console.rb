@@ -12,7 +12,8 @@ Star.delete_all()
 hollywood = Movie.new (
   {
     'title' => 'Once Upon a Time in Hollywood',
-    'genre' => 'Nostalgia'
+    'genre' => 'Nostalgia',
+    'budget' => 100000000
   }
 )
 hollywood.save()
@@ -20,7 +21,8 @@ hollywood.save()
 joker = Movie.new (
   {
     'title' => 'Joker',
-    'genre' => 'Comic Book'
+    'genre' => 'Comic Book',
+    'budget' => 100000000
   }
 )
 joker.save()
@@ -28,7 +30,8 @@ joker.save()
 revenant = Movie.new (
   {
     'title' => 'The Revenant',
-    'genre' => 'Drama'
+    'genre' => 'Drama',
+    'budget' => 100000000
   }
 )
 revenant.save()

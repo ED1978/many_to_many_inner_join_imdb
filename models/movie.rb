@@ -2,13 +2,14 @@ require_relative('../db/sql_runner.rb')
 
 class Movie
 
-  attr_accessor :title, :genre
+  attr_accessor :title, :genre, :budget
   attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @title = options['title']
     @genre = options['genre']
+    @budget = options['budget']
   end
 
   # CREATE
@@ -16,14 +17,15 @@ class Movie
     sql = "INSERT INTO movies
     (
       title,
-      genre
+      genre,
+      budget
     )
     VALUES
     (
-      $1, $2
+      $1, $2, $3
     )
     RETURNING id"
-    values = [@title, @genre]
+    values = [@title, @genre, @budget]
     movie = SqlRunner.run(sql, values).first
     @id = movie['id'].to_i
   end
@@ -47,13 +49,14 @@ class Movie
     sql = "UPDATE movies SET
     (
       title,
-      genre
+      genre,
+      budget
     ) =
     (
-      $1, $2
+      $1, $2, $3
     )
-    WHERE id = $3"
-    values = [@title, @genre, @id]
+    WHERE id = $4"
+    values = [@title, @genre, @budget, @id]
     SqlRunner.run(sql, values)
   end
 
