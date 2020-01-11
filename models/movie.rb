@@ -1,4 +1,6 @@
 require_relative('../db/sql_runner.rb')
+require_relative('./Casting.rb')
+
 
 class Movie
 
@@ -81,15 +83,26 @@ class Movie
     WHERE movie_id = $1"
     values = [@id]
     stars = SqlRunner.run(sql, values)
-    return stars.map { |star| Star.new(star) }
+    results =  stars.map { |star| Star.new(star) }
+    return results
   end
 
   # CASTINGS JOIN
   def castings()
     sql = "SELECT * FROM castings WHERE movie_id = $1"
     values = [@id]
-    castings = SqlRunner.run(sql,values)
-    return castings.map { |casting| Casting.new(casting) }
+    movie_castings = SqlRunner.run(sql, values)
+    results =  movie_castings.map { |casting| Casting.new(casting) }
+    return results
+  end
+
+  def calculate_total_star_fees()
+    movie_castings = castings()
+    total_fees = 0
+    for casting in movie_castings do
+      total_fees += casting.fee.to_i
+    end
+    return total_fees
   end
 
 end

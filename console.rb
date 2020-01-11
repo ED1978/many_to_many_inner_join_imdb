@@ -180,6 +180,7 @@ deniro_joker_casting.update()
 
 castings = Casting.all()
 
+total_star_fees_hollywood = hollywood.calculate_total_star_fees()
 
 binding.pry
 nil
