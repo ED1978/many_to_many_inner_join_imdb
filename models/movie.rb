@@ -85,5 +85,11 @@ class Movie
   end
 
   # CASTINGS JOIN
+  def castings()
+    sql = "SELECT * FROM castings WHERE movie_id = $1"
+    values = [@id]
+    castings = SqlRunner.run(sql,values)
+    return castings.map { |casting| Casting.new(casting) }
+  end
 
 end
