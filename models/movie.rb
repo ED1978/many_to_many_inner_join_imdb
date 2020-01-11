@@ -105,4 +105,8 @@ class Movie
     return total_fees
   end
 
+  def calculate_remaining_budget()
+    return @budget - calculate_total_star_fees()
+  end
+
 end
